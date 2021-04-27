@@ -18,6 +18,8 @@
 #include <cstdlib>											// Einbindung Bibliothek "Standart Bibliothek"
 #include <locale>											// Einbindung Bibliothek "Sprachpaket"
 #include "BenutzerinteraktionModul.h"						// include auf Headerdatei SteuerFun
+#include "FormelnModul.h"						// include auf Headerdatei SteuerFun
+
 #include <Windows.h>										// include windows.h
 
 
@@ -37,6 +39,9 @@ int main()
 	double alpha = 0;
 	double beta = 0;
 	double R20 = 0;
+	double temperatur = 0;
+	double ergebnis = 0;
+
 	do
 	{
 		system("cls");
@@ -46,7 +51,10 @@ int main()
 		{
 		case 1:
 			Materialwahl(rho20, alpha, beta);
-			printf("\n*** You selected 1 ***\n\n"); 
+			temperatur = TemperaturEingabe();
+			R20 = WiederstandEigabe();
+			ergebnis = RthetaVonR20(R20, temperatur, alpha, beta);
+			ErgebnisAusgabe(ergebnis);
 			break;
 		case 2:  
 			Materialwahl(rho20, alpha, beta);

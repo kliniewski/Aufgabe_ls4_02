@@ -48,7 +48,6 @@ void Materialwahl(double& rho20, double& alpha, double& beta)
     int auswahl = 0;
     do
     {
-        system("cls");
         UberschriftMaterial();
         auswahl = Auswahlfunktion();
         switch (auswahl)
@@ -58,6 +57,7 @@ void Materialwahl(double& rho20, double& alpha, double& beta)
 
             Leiterwahl(rho20, alpha, beta);
             printf("\n*** You selected 1 ***\n\n");
+            return;
             break;
         case 2:
             cout << "Sonstige Metalle" << endl;                                       // Ausgabe Text
@@ -80,33 +80,32 @@ void Leiterwahl(double& rho20, double& alpha, double& beta)
     int auswahl = 0;
     do
     {
-        system("cls");
         UberschriftLeiter();
         auswahl = Auswahlfunktion();
         switch (auswahl)
         {
         case 1:
-            Silber(rho20, alpha);
+            Silber(rho20, alpha, beta);
             return;
             break;
         case 2:
-            Kupfer(rho20, alpha);
+            Kupfer(rho20, alpha, beta);
             return;
             break;
         case 3:
-            Gold(rho20, alpha);
+            Gold(rho20, alpha, beta);
             return;
             break;
         case 4:
-            Aluminium(rho20, alpha);
+            Aluminium(rho20, alpha, beta);
             return;
             break;
         case 5:
-            Wolfram(rho20, alpha);
+            Wolfram(rho20, alpha, beta);
             return;
             break;
         case 6:
-            Zinn(rho20, alpha);
+            Zinn(rho20, alpha, beta);
             printf("\n*** You selected 1 ***\n\n");
             return;
             break;
@@ -116,8 +115,28 @@ void Leiterwahl(double& rho20, double& alpha, double& beta)
 
     } while (auswahl != 4);
 }
+
+double TemperaturEingabe()
+{
+    double eingabe;
+    UberschriftTemperatur();
+    cin >> eingabe;
+    return eingabe;
+}
+
+double WiederstandEigabe()
+{
+    double eingabe;
+    UberschriftWiederstand();
+    cin >> eingabe;
+    return eingabe;
+}
+
+
+
 void UberschriftHauptmenu()
 {
+    system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
     cout << "- Wähle die Situation -------------------------------" << endl;        // Ausgabe Text
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
@@ -134,6 +153,7 @@ void UberschriftHauptmenu()
 
 void UberschriftMaterial()
 {
+    system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
     cout << "- Wähle das Material  -------------------------------" << endl;        // Ausgabe Text
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
@@ -143,11 +163,14 @@ void UberschriftMaterial()
     cout << endl;
     cout << "- (3) Widerstandlegirungen" << endl;                                       // Ausgabe Text
     cout << endl;
+    cout << "- (4) Programm beenden" << endl;                                       // Ausgabe Text
+    cout << endl;
     cout << "-->";
 }
 
 void UberschriftLeiter()
 {
+    system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
     cout << "- Wähle das Material  -------------------------------" << endl;        // Ausgabe Text
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
@@ -163,5 +186,39 @@ void UberschriftLeiter()
     cout << endl;
     cout << "- (6) Zinn" << endl;                                       // Ausgabe Text
     cout << endl;
+    cout << "- (7) Programm beenden" << endl;                                       // Ausgabe Text
+    cout << endl;
     cout << "-->";
+}
+
+void UberschriftTemperatur()
+{
+    system("cls");
+    cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
+    cout << "- Tippe das Temperatur in °C und bestätige mit Enter-" << endl;        // Ausgabe Text
+    cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
+    cout << endl;
+    cout << "-->";
+}
+
+void UberschriftWiederstand()
+{
+    system("cls");
+    cout << "------------------------------------------------------" << endl;        // Ausgabe Text
+    cout << "- Tippe das Wiederstand in Ohm und bestätige mit Enter-" << endl;        // Ausgabe Text
+    cout << "------------------------------------------------------" << endl;        // Ausgabe Text
+    cout << endl;
+    cout << "-->";
+}
+
+void ErgebnisAusgabe(double ergebnis)
+{
+    system("cls");
+    cout << "------------------------------------------------------" << endl;        // Ausgabe Text
+    cout << "-Temperaturabhängige Temperatur Rtheta beträgt:      -" << endl;        // Ausgabe Text
+    cout << "@    " << ergebnis << " Ohm                               -" << endl;        // Ausgabe Text
+    cout << "------------------------------------------------------" << endl;        // Ausgabe Text
+    cout << endl;
+    system("pause");
+    return;
 }
