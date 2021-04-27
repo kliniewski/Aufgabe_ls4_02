@@ -35,6 +35,7 @@ int main()
 	int auswahl = 0;
 	double rho20 = 0;
 	double alpha = 0;
+	double beta = 0;
 	double R20 = 0;
 	do
 	{
@@ -44,11 +45,11 @@ int main()
 		switch (auswahl)
 		{
 		case 1:
-			Materialwahl(rho20, alpha);
+			Materialwahl(rho20, alpha, beta);
 			printf("\n*** You selected 1 ***\n\n"); 
 			break;
 		case 2:  
-			Materialwahl(rho20, alpha);
+			Materialwahl(rho20, alpha, beta);
 			printf("\n*** You selected 2 ***\n\n"); 
 			break;
 		case 3:  

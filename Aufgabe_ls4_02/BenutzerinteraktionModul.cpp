@@ -43,24 +43,25 @@ int Auswahlfunktion()
 
 }
 
-void Materialwahl(double& rho20, double& alpha)
+void Materialwahl(double& rho20, double& alpha, double& beta)
 {
     int auswahl = 0;
     do
     {
         system("cls");
+        UberschriftMaterial();
         auswahl = Auswahlfunktion();
         switch (auswahl)
         {
         case 1:
             cout << "Leiter- und Kontaktmaterial" << endl;                                       // Ausgabe Text
 
-            Leiterwahl(rho20, alpha);
+            Leiterwahl(rho20, alpha, beta);
             printf("\n*** You selected 1 ***\n\n");
             break;
         case 2:
             cout << "Sonstige Metalle" << endl;                                       // Ausgabe Text
-            Materialwahl(rho20, alpha);
+            Materialwahl(rho20, alpha, beta);
             printf("\n*** You selected 2 ***\n\n");
             break;
         case 3:
@@ -74,12 +75,13 @@ void Materialwahl(double& rho20, double& alpha)
     } while (auswahl != 4);
 }
 
-void Leiterwahl(double& rho20, double& alpha)
+void Leiterwahl(double& rho20, double& alpha, double& beta)
 {
     int auswahl = 0;
     do
     {
         system("cls");
+        UberschriftLeiter();
         auswahl = Auswahlfunktion();
         switch (auswahl)
         {
@@ -140,6 +142,26 @@ void UberschriftMaterial()
     cout << "- (2) Sonstige Metalle" << endl;                                      // Ausgabe Text
     cout << endl;
     cout << "- (3) Widerstandlegirungen" << endl;                                       // Ausgabe Text
+    cout << endl;
+    cout << "-->";
+}
+
+void UberschriftLeiter()
+{
+    cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
+    cout << "- Wähle das Material  -------------------------------" << endl;        // Ausgabe Text
+    cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
+    cout << "- (1) Silber" << endl;                                   // Ausgabe Text
+    cout << endl;
+    cout << "- (2) Kupfer" << endl;                                      // Ausgabe Text
+    cout << endl;
+    cout << "- (3) Gold" << endl;                                       // Ausgabe Text
+    cout << endl;
+    cout << "- (4) Aluminium" << endl;                                       // Ausgabe Text
+    cout << endl;
+    cout << "- (5) Wolfram" << endl;                                       // Ausgabe Text
+    cout << endl;
+    cout << "- (6) Zinn" << endl;                                       // Ausgabe Text
     cout << endl;
     cout << "-->";
 }

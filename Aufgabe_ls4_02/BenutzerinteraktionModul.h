@@ -1,5 +1,7 @@
 int Auswahlfunktion();
-void Materialwahl(double &rho20, double &alpha);
-void Leiterwahl(double &rho20, double &alpha);
+void Materialwahl(double &rho20, double &alpha, double &beta);
+void Leiterwahl(double &rho20, double &alpha, double &beta);
 
 void UberschriftHauptmenu();
+void UberschriftMaterial();
+void UberschriftLeiter();
