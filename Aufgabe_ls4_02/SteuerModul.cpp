@@ -41,6 +41,9 @@ int main()
 	double R20 = 0;
 	double temperatur = 0;
 	double ergebnis = 0;
+	double laenge = 0;
+	double querschnitt = 0;
+	bool beenden = false;
 
 	do
 	{
@@ -50,18 +53,28 @@ int main()
 		switch (auswahl)
 		{
 		case 1:
-			Materialwahl(rho20, alpha, beta);
-			temperatur = TemperaturEingabe();
-			R20 = WiederstandEigabe();
-			ergebnis = RthetaVonR20(R20, temperatur, alpha, beta);
-			ErgebnisAusgabe(ergebnis);
+			beenden = Materialwahl(rho20, alpha, beta);
+			if (!beenden)
+			{
+				temperatur = TemperaturEingabe();
+				R20 = WiederstandEigabe();
+				ergebnis = RthetaVonR20(R20, temperatur, alpha, beta);
+				ErgebnisAusgabe(ergebnis);
+			}
 			break;
 		case 2:  
-			Materialwahl(rho20, alpha, beta);
-			printf("\n*** You selected 2 ***\n\n"); 
+			beenden = Materialwahl(rho20, alpha, beta);
+			if (!beenden)
+			{
+				temperatur = TemperaturEingabe();
+				laenge = LaengeEigabe();
+				querschnitt = QuerschnittEigabe();
+				R20 = Normwiderstand(laenge, querschnitt, rho20);
+				ergebnis = RthetaVonR20(R20, temperatur, alpha, beta);
+				ErgebnisAusgabe(ergebnis);
+			}
 			break;
 		case 3:  
-			printf("\n*** You selected 3 ***\n\n"); 
 			break;
 		}
 	
