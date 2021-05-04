@@ -20,4 +20,4 @@ void Nickelin(double& rho20, double& alpha, double& beta);
 void Konstantan(double& rho20, double& alpha, double& beta);
 void Chromnickel(double& rho20, double& alpha, double& beta);
 
-// hallo ihr 
+// hallo ihr 2
