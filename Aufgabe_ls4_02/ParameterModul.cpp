@@ -139,7 +139,7 @@ void Nickelin(double& rho20, double& alpha, double& beta)
 	return;
 }
 
-void Konstantin(double& rho20, double& alpha, double& beta)
+void Konstantan(double& rho20, double& alpha, double& beta)
 {
 	rho20 = 0.5;
 	alpha = 0.000003;
