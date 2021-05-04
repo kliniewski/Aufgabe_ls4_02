@@ -53,7 +53,7 @@ int main()
 		switch (auswahl)
 		{
 		case 1:
-			beenden = Materialwahl(rho20, alpha, beta);
+			beenden = MaterialWahl(rho20, alpha, beta);
 			if (!beenden)
 			{
 				temperatur = TemperaturEingabe();
@@ -63,7 +63,7 @@ int main()
 			}
 			break;
 		case 2:  
-			beenden = Materialwahl(rho20, alpha, beta);
+			beenden = MaterialWahl(rho20, alpha, beta);
 			if (!beenden)
 			{
 				temperatur = TemperaturEingabe();

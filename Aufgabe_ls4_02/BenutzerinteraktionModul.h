@@ -1,8 +1,8 @@
 int Auswahlfunktion();
-bool Materialwahl(double &rho20, double &alpha, double &beta);
-bool Leiterwahl(double &rho20, double &alpha, double &beta);
-bool Metalwahl(double& rho20, double& alpha, double& beta);
-bool Widerstandlegirungwahl(double& rho20, double& alpha, double& beta);
+bool MaterialWahl(double &rho20, double &alpha, double &beta);
+bool LeiterWahl(double &rho20, double &alpha, double &beta);
+bool MetallWahl(double& rho20, double& alpha, double& beta);
+bool WiderstandLegierungWahl(double& rho20, double& alpha, double& beta);
 
 double TemperaturEingabe();
 double WiderstandEingabe();
@@ -13,7 +13,7 @@ double QuerschnittEingabe();
 void UeberschriftHauptmenu();
 void UeberschriftMaterial();
 void UeberschriftLeiter();
-void UeberschriftMetal();
+void UeberschriftMetall();
 void UeberschriftLegierung();
 
 

@@ -122,7 +122,7 @@ void Quecksilber(double& rho20, double& alpha, double& beta)
 	return;
 }
 
-//Wiederstandslegierungen
+//Widerstandslegierungen
 void Manganin(double& rho20, double& alpha, double& beta)
 {
 	rho20 = 0.42;

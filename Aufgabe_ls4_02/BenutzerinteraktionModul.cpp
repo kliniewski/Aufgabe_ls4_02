@@ -43,7 +43,7 @@ int Auswahlfunktion()
 
 }
 
-bool Materialwahl(double& rho20, double& alpha, double& beta)
+bool MaterialWahl(double& rho20, double& alpha, double& beta)
 {
     int auswahl = 0;
     bool ausgewaelt = false;
@@ -54,17 +54,17 @@ bool Materialwahl(double& rho20, double& alpha, double& beta)
         switch (auswahl)
         {
         case 1:
-            ausgewaelt = Leiterwahl(rho20, alpha, beta);
+            ausgewaelt = LeiterWahl(rho20, alpha, beta);
             if (ausgewaelt)
                 return false;
             break;
         case 2:
-            ausgewaelt = Metalwahl(rho20, alpha, beta);
+            ausgewaelt = MetallWahl(rho20, alpha, beta);
             if (ausgewaelt)
                 return false;
             break;
         case 3:
-            ausgewaelt = Widerstandlegirungwahl(rho20, alpha, beta);
+            ausgewaelt = WiderstandLegierungWahl(rho20, alpha, beta);
             if (ausgewaelt)
                 return false;
             break;
@@ -76,7 +76,7 @@ bool Materialwahl(double& rho20, double& alpha, double& beta)
     return true;
 }
 
-bool Leiterwahl(double& rho20, double& alpha, double& beta)
+bool LeiterWahl(double& rho20, double& alpha, double& beta)
 {
     int auswahl = 0;
     do
@@ -118,12 +118,12 @@ bool Leiterwahl(double& rho20, double& alpha, double& beta)
 }
 
 
-bool Metalwahl(double& rho20, double& alpha, double& beta)
+bool MetallWahl(double& rho20, double& alpha, double& beta)
 {
     int auswahl = 0;
     do
     {
-        UeberschriftMetal();
+        UeberschriftMetall();
         auswahl = Auswahlfunktion();
         switch (auswahl)
         {
@@ -160,7 +160,7 @@ bool Metalwahl(double& rho20, double& alpha, double& beta)
 }
 
 
-bool Widerstandlegirungwahl(double& rho20, double& alpha, double& beta)
+bool WiderstandLegierungWahl(double& rho20, double& alpha, double& beta)
 {
     int auswahl = 0;
     do
@@ -251,9 +251,9 @@ void UeberschriftHauptmenu()
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
     cout << "- Wähle die Situation -------------------------------" << endl;        // Ausgabe Text
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
-    cout << "- (1) Rtheta anhand das Material, R20 und die Temperatur " << endl;                                   // Ausgabe Text
+    cout << "- (1) Berechnung Rtheta anhand des Materials, R20 und der Temperatur " << endl;                                   // Ausgabe Text
     cout << endl;
-    cout << "- (2) Rtheta anhand die Durchmesser, Querschnitt, Material und die Temperatur" << endl;                                      // Ausgabe Text
+    cout << "- (2) Berechnung Rtheta anhand des Materials, des Querschnittes, des Durchmessers und der Temperatur" << endl;                                      // Ausgabe Text
     cout << endl;
     cout << "- (3) Programm beenden" << endl;                                       // Ausgabe Text
     cout << endl;
@@ -272,7 +272,7 @@ void UeberschriftMaterial()
     cout << endl;
     cout << "- (2) Sonstige Metalle" << endl;                                      // Ausgabe Text
     cout << endl;
-    cout << "- (3) Widerstandlegirungen" << endl;                                       // Ausgabe Text
+    cout << "- (3) Widerstandslegierungen" << endl;                                       // Ausgabe Text
     cout << endl;
     cout << "- (4) Auswahl abbrechen" << endl;                                       // Ausgabe Text
     cout << endl;
@@ -306,7 +306,7 @@ void UeberschriftTemperatur()
 {
     system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
-    cout << "- Tippe das Temperatur in °C und bestätige mit Enter-" << endl;        // Ausgabe Text
+    cout << "- Gebe die Temperatur in °C ein und bestätige mit Enter-" << endl;        // Ausgabe Text
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
     cout << endl;
     cout << "-->";
@@ -316,7 +316,7 @@ void UeberschriftWiderstand()
 {
     system("cls");
     cout << "------------------------------------------------------" << endl;        // Ausgabe Text
-    cout << "- Tippe das Wiederstand in Ohm und bestätige mit Enter-" << endl;        // Ausgabe Text
+    cout << "- Gebe den Widerstand in Ohm ein und bestätige mit Enter-" << endl;        // Ausgabe Text
     cout << "------------------------------------------------------" << endl;        // Ausgabe Text
     cout << endl;
     cout << "-->";
@@ -326,7 +326,7 @@ void UeberschriftLaenge()
 {
     system("cls");
     cout << "------------------------------------------------------" << endl;        // Ausgabe Text
-    cout << "- Tippe die Länge in Meter und bestätige mit Enter-" << endl;        // Ausgabe Text
+    cout << "- Gebe die Länge in Meter ein und bestätige mit Enter-" << endl;        // Ausgabe Text
     cout << "------------------------------------------------------" << endl;        // Ausgabe Text
     cout << endl;
     cout << "-->";
@@ -336,7 +336,7 @@ void UeberschriftQuerschnitt()
 {
     system("cls");
     cout << "------------------------------------------------------" << endl;        // Ausgabe Text
-    cout << "- Tippe das Querschnitt in mm² und bestätige mit Enter-" << endl;        // Ausgabe Text
+    cout << "- Tippe den Querschnitt in mm² und bestätige mit Enter-" << endl;        // Ausgabe Text
     cout << "------------------------------------------------------" << endl;        // Ausgabe Text
     cout << endl;
     cout << "-->";
@@ -346,7 +346,7 @@ void ErgebnisAusgabe(double ergebnis)
 {
     system("cls");
     cout << "------------------------------------------------------" << endl;        // Ausgabe Text
-    cout << "-Temperaturabhängige Wiederstand Rtheta beträgt:      -" << endl;        // Ausgabe Text
+    cout << "-Temperaturabhängiger Widerstand Rtheta beträgt:      -" << endl;        // Ausgabe Text
     cout << "@    " << ergebnis << " Ohm                               -" << endl;        // Ausgabe Text
     cout << "------------------------------------------------------" << endl;        // Ausgabe Text
     cout << endl;
@@ -354,7 +354,7 @@ void ErgebnisAusgabe(double ergebnis)
     return;
 }
 
-void UeberschriftMetal()
+void UeberschriftMetall()
 {
     system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
