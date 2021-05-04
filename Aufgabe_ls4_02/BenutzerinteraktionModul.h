@@ -5,22 +5,22 @@ bool Metalwahl(double& rho20, double& alpha, double& beta);
 bool Widerstandlegirungwahl(double& rho20, double& alpha, double& beta);
 
 double TemperaturEingabe();
-double WiederstandEigabe();
-double LaengeEigabe();
-double QuerschnittEigabe();
+double WiderstandEingabe();
+double LaengeEingabe();
+double QuerschnittEingabe();
 
 
-void UberschriftHauptmenu();
-void UberschriftMaterial();
-void UberschriftLeiter();
-void UberschriftMetal();
-void UberschriftLegirung();
+void UeberschriftHauptmenu();
+void UeberschriftMaterial();
+void UeberschriftLeiter();
+void UeberschriftMetal();
+void UeberschriftLegierung();
 
 
-void UberschriftTemperatur();
-void UberschriftWiederstand();
-void UberschriftLaenge();
-void UberschriftQuerschnitt();
+void UeberschriftTemperatur();
+void UeberschriftWiderstand();
+void UeberschriftLaenge();
+void UeberschriftQuerschnitt();
 
 
 void ErgebnisAusgabe(double ergebnis);

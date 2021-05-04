@@ -49,7 +49,7 @@ bool Materialwahl(double& rho20, double& alpha, double& beta)
     bool ausgewaelt = false;
     do
     {
-        UberschriftMaterial();
+        UeberschriftMaterial();
         auswahl = Auswahlfunktion();
         switch (auswahl)
         {
@@ -81,7 +81,7 @@ bool Leiterwahl(double& rho20, double& alpha, double& beta)
     int auswahl = 0;
     do
     {
-        UberschriftLeiter();
+        UeberschriftLeiter();
         auswahl = Auswahlfunktion();
         switch (auswahl)
         {
@@ -123,7 +123,7 @@ bool Metalwahl(double& rho20, double& alpha, double& beta)
     int auswahl = 0;
     do
     {
-        UberschriftMetal();
+        UeberschriftMetal();
         auswahl = Auswahlfunktion();
         switch (auswahl)
         {
@@ -165,7 +165,7 @@ bool Widerstandlegirungwahl(double& rho20, double& alpha, double& beta)
     int auswahl = 0;
     do
     {
-        UberschriftLegirung();
+        UeberschriftLegierung();
         auswahl = Auswahlfunktion();
         switch (auswahl)
         {
@@ -197,24 +197,24 @@ bool Widerstandlegirungwahl(double& rho20, double& alpha, double& beta)
 double TemperaturEingabe()
 {
     double eingabe;
-    UberschriftTemperatur();
+    UeberschriftTemperatur();
     cin >> eingabe;
     return eingabe;
 }
 
-double WiederstandEigabe()
+double WiderstandEingabe()
 {
     double eingabe;
-    UberschriftWiederstand();
+    UeberschriftWiderstand();
     cin >> eingabe;
     return eingabe;
 }
 
 
-double LaengeEigabe()
+double LaengeEingabe()
 {
     double eingabe = 0;
-    UberschriftLaenge();
+    UeberschriftLaenge();
     while (!(cin >> eingabe)) 									            // Eingabe des oberen Grenzwerts, Schleife die gewährleistet, dass die Eingabe eine Zahl ist
     {
         cin.clear();
@@ -227,10 +227,10 @@ double LaengeEigabe()
     return eingabe;
 
 }
-double QuerschnittEigabe()
+double QuerschnittEingabe()
 {
     double eingabe = 0;
-    UberschriftQuerschnitt();
+    UeberschriftQuerschnitt();
     while (!(cin >> eingabe)) 									            // Eingabe des oberen Grenzwerts, Schleife die gewährleistet, dass die Eingabe eine Zahl ist
     {
         cin.clear();
@@ -245,7 +245,7 @@ double QuerschnittEigabe()
 }
 
 
-void UberschriftHauptmenu()
+void UeberschriftHauptmenu()
 {
     system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
@@ -262,7 +262,7 @@ void UberschriftHauptmenu()
 
 
 
-void UberschriftMaterial()
+void UeberschriftMaterial()
 {
     system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
@@ -279,7 +279,7 @@ void UberschriftMaterial()
     cout << "-->";
 }
 
-void UberschriftLeiter()
+void UeberschriftLeiter()
 {
     system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
@@ -302,7 +302,7 @@ void UberschriftLeiter()
     cout << "-->";
 }
 
-void UberschriftTemperatur()
+void UeberschriftTemperatur()
 {
     system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
@@ -312,7 +312,7 @@ void UberschriftTemperatur()
     cout << "-->";
 }
 
-void UberschriftWiederstand()
+void UeberschriftWiderstand()
 {
     system("cls");
     cout << "------------------------------------------------------" << endl;        // Ausgabe Text
@@ -322,7 +322,7 @@ void UberschriftWiederstand()
     cout << "-->";
 }
 
-void UberschriftLaenge()
+void UeberschriftLaenge()
 {
     system("cls");
     cout << "------------------------------------------------------" << endl;        // Ausgabe Text
@@ -332,7 +332,7 @@ void UberschriftLaenge()
     cout << "-->";
 }
 
-void UberschriftQuerschnitt()
+void UeberschriftQuerschnitt()
 {
     system("cls");
     cout << "------------------------------------------------------" << endl;        // Ausgabe Text
@@ -354,7 +354,7 @@ void ErgebnisAusgabe(double ergebnis)
     return;
 }
 
-void UberschriftMetal()
+void UeberschriftMetal()
 {
     system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
@@ -376,7 +376,7 @@ void UberschriftMetal()
     cout << endl;
     cout << "-->";
 }
-void UberschriftLegirung()
+void UeberschriftLegierung()
 {
     system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgase Text

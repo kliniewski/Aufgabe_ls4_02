@@ -48,7 +48,7 @@ int main()
 	do
 	{
 		system("cls");
-		UberschriftHauptmenu();
+		UeberschriftHauptmenu();
 		auswahl = Auswahlfunktion();
 		switch (auswahl)
 		{
@@ -57,7 +57,7 @@ int main()
 			if (!beenden)
 			{
 				temperatur = TemperaturEingabe();
-				R20 = WiederstandEigabe();
+				R20 = WiderstandEingabe();
 				ergebnis = RthetaVonR20(R20, temperatur, alpha, beta);
 				ErgebnisAusgabe(ergebnis);
 			}
@@ -67,8 +67,8 @@ int main()
 			if (!beenden)
 			{
 				temperatur = TemperaturEingabe();
-				laenge = LaengeEigabe();
-				querschnitt = QuerschnittEigabe();
+				laenge = LaengeEingabe();
+				querschnitt = QuerschnittEingabe();
 				R20 = Normwiderstand(laenge, querschnitt, rho20);
 				ergebnis = RthetaVonR20(R20, temperatur, alpha, beta);
 				ErgebnisAusgabe(ergebnis);

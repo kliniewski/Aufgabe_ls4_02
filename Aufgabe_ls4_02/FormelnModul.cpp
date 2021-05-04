@@ -12,10 +12,10 @@ using namespace std;                            // Definition des namespace
 
 
 
-double RthetaVonR20(double normWiederstand, double temperatur, double alpha, double beta)             // Funktionsdefinition
+double RthetaVonR20(double normWiderstand, double temperatur, double alpha, double beta)             // Funktionsdefinition
 {
 	double ergebnis;
-	ergebnis = normWiederstand * (1 + alpha * (temperatur - 20) + beta * pow((temperatur - 20), 2));
+	ergebnis = normWiderstand * (1 + alpha * (temperatur - 20) + beta * pow((temperatur - 20), 2));
 
 	return ergebnis;
 }
