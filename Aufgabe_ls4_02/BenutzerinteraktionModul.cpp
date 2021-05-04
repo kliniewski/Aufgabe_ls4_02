@@ -379,7 +379,7 @@ void UberschriftMetal()
 void UberschriftLegirung()
 {
     system("cls");
-    cout << "-----------------------------------------------------" << endl;        // Ausgabse Text
+    cout << "-----------------------------------------------------" << endl;        // Ausgase Text
     cout << "- Wähle das Material  -------------------------------" << endl;        // Ausgabe Text
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
     cout << "- (1) Manganin" << endl;                                   // Ausgabe Text
