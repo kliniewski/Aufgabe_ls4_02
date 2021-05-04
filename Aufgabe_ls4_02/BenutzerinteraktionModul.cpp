@@ -178,7 +178,7 @@ bool Widerstandlegirungwahl(double& rho20, double& alpha, double& beta)
             return true;
             break;
         case 3:
-            Konstantin(rho20, alpha, beta);
+            Konstantan(rho20, alpha, beta);
             return true;
             break;
         case 4:

@@ -17,5 +17,5 @@ void Quecksilber(double& rho20, double& alpha, double& beta);
 
 void Manganin(double& rho20, double& alpha, double& beta);
 void Nickelin(double& rho20, double& alpha, double& beta);
-void Konstantin(double& rho20, double& alpha, double& beta);
+void Konstantan(double& rho20, double& alpha, double& beta);
 void Chromnickel(double& rho20, double& alpha, double& beta);
