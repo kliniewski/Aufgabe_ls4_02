@@ -249,11 +249,11 @@ void UeberschriftHauptmenu()
 {
     system("cls");
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
-    cout << "- Wähle die Situation -------------------------------" << endl;        // Ausgabe Text
+    cout << "- Wähle die Berechnungsgrundlage für Rtheta -------------------------------" << endl;        // Ausgabe Text
     cout << "-----------------------------------------------------" << endl;        // Ausgabe Text
-    cout << "- (1) Berechnung Rtheta anhand des Materials, R20 und der Temperatur " << endl;                                   // Ausgabe Text
+    cout << "- (1) Material, R20 und Temperatur " << endl;                                   // Ausgabe Text
     cout << endl;
-    cout << "- (2) Berechnung Rtheta anhand des Materials, des Querschnittes, des Durchmessers und der Temperatur" << endl;                                      // Ausgabe Text
+    cout << "- (2) Material, Querschnitt, Durchmesser und Temperatur" << endl;                                      // Ausgabe Text
     cout << endl;
     cout << "- (3) Programm beenden" << endl;                                       // Ausgabe Text
     cout << endl;
